@@ -15,13 +15,14 @@ const ListTemplate = ({ title, children }: ListTemplateProps) => {
   return (
     <div
       style={{
-        height: "80vh",
+        minHeight: "80vh",
         width: "80vw",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         gap: "20px",
+        padding: "24px",
         border: "1px solid #004d29",
       }}
     >
@@ -31,7 +32,15 @@ const ListTemplate = ({ title, children }: ListTemplateProps) => {
         </p>
       </h1>
       <Label text={title} />
-      <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "20px",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {children}
       </div>
     </div>

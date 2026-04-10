@@ -3,6 +3,7 @@ import "./App.css";
 import { CardProvider } from "./Context/CardProvider";
 import Home from "./Pages/Home/Home";
 import List from "./Pages/List/List";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
     <CardProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/list" element={<List />} />
+          <Route path="home" element={<Home />} />
+          <Route path="list" element={<List />} />
+          <Route path="products/:productId" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>
     </CardProvider>
